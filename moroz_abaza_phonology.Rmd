@@ -1,5 +1,5 @@
 ---
-title: "Phonology of T'ap'anta Abaza: examples from Inzhich-Chukun and Gwymlokt"
+title: "Phonology of T'ap'anta Abaza: examples from Inzhich-Chukun and Krasniy Vostok"
 author: |
         | G. A. Moroz
         | (HSE University, Russia)
@@ -12,6 +12,7 @@ output:
     latex_engine: xelatex
     number_sections: true
     df_print: kable
+    toc: true
     fig_caption: yes
     includes:
       in_header: "pre.tex"
@@ -21,15 +22,17 @@ output:
 knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, fig.width = 8, fig.height = 5)
 library(tidyverse)
 theme_set(theme_minimal()+theme(text = element_text(family = "Times New Roman", size = 18)))
+library(kableExtra)
 # setwd("/home/agricolamz/work/articles/2021_abaza_phonology")
 ```
 
+\pagebreak
 
 # Introduction
 
 ## General information about Abaza
 
-In this article I describe two varieties of Tapanta dialect of Abaza (glottocode `abaz1241`) spoken in two villages in the Karachay-Cherkess Republic: Inzhich-Chukun (in Abaza /jənˈdʒəɡʲ-tʃk'ʷən/) and Krasniy Vostok (in Abaza /ɡʷəmˈlokt/). Abaza is a language of the Abkhaz-Abaza group of Northwest Caucasian family of languages. After the Caucasian War (1817--1864) a lot of Abaza, Abkhaz, Ubykh and Adyghe people were forced either to resettle from higher mountains or to immigrate to the Ottoman Empire. As a result Abaza people were split into those who remain in Russia (mostly in the Karachay-Cherkess Republic) and who moved to Turkey. According to the 2010 Russian census, there are slightly less than 38 thousand speakers of Abaza in Russia. The exact number of speakers in other countries, mainly in Turkey [@chirikba12: 21--23], is unknown. The data analyzed in this study were collected in 2018, 2019 and 2021 during a field trip to the villages. Even though traditionally Abaza is treated as a separate language with two dialects T'ap'anta and Shkharawa [@genko55: 5--7; @tabulova76: 3--4; @lomtatidze06: 98], some of the researches consider Abkhaz and Abaza to be a dialect continuum [e. g. @hewitt79: 1; @colarusso88: 7--9; @chirikba96]. However varieties of Inzhich-Chukun and Krasniy Vostok belong to the same dialect, those lects have their own differences, e. g. *Abaza language* is /abaza bəz**ŝ**a/ in Inzhich-Chukun and /abaza bəz**ʂ**a/ in Krasnyj Vostok.
+In this article I describe two varieties of Tapanta dialect of Abaza (ISO-639-3 abk, glottocode `abaz1241`) spoken in two villages in the Karachay-Cherkess Republic: Inzhich-Chukun (in Abaza /jənˈdʒəɡʲ-tʃk'ʷən/) and Krasniy Vostok (in Abaza /ɡʷəmˈlokt/). Abaza is a language of the Abkhaz-Abaza group of Northwest Caucasian family of languages. After the Caucasian War (1817--1864) a lot of Abaza, Abkhaz, Ubykh and Adyghe people were forced either to resettle from higher mountains or to immigrate to the Ottoman Empire. As a result Abaza people were split into those who remain in Russia (mostly in the Karachay-Cherkess Republic, see Figure \ref{fig:abaza-map} created with `lingtypology` [@moroz17]) and who moved to Turkey. According to the 2010 Russian census, there are slightly less than 38 thousand speakers of Abaza in Russia. The exact number of speakers in other countries, mainly in Turkey [@chirikba12: 21--23], is unknown. The data analyzed in this study were collected in 2018, 2019 and 2021 during a field trip to the villages. Even though traditionally Abaza is treated as a separate language with two dialects T'ap'anta and Shkharawa [@genko55: 5--7; @tabulova76: 3--4; @lomtatidze06: 98], some of the researches consider Abkhaz and Abaza to be a dialect continuum [e. g. @hewitt79: 1; @colarusso88: 7--9; @chirikba96]. However varieties of Inzhich-Chukun and Krasniy Vostok belong to the same dialect, those lects have their own differences, e. g. *Abaza language* is /abaza bəz**ŝ**a/ in Inzhich-Chukun and /abaza bəz**ʂ**a/ in Krasnyj Vostok.
 
 
 ```{r, eval = FALSE}
@@ -47,23 +50,69 @@ map.feature(languages = df$language,
             minimap = TRUE, minimap.position = "topleft")
 ```
 
-```{r, fig.cap="Villages of the Karachay-Cherkess Republic where Abaza speakers live colored by the dialect", fig.align="center"}
+```{r abaza-map, fig.cap="Villages of the Karachay-Cherkess Republic where Abaza speakers live colored by the dialect", fig.align="center"}
 knitr::include_graphics("images/01_abaza_map.png", dpi = 200)
 ```
 
 ## State of research
 
-Phonological inventory of Abaza can be found in multiple sources [@bouda40; @genko55; @allen56; @tabulova76; @colarusso88; @oherin92; @chirikba96; @lomtatidze06; @arkadiev19; @oherin21], however more detailed phonological description is limited to [@genko55; @tabulova76; @colarusso88; @arkadiev19] and lack any acoustic analysis that appears just recently [@mamonova19].
+Phonological inventory of Abaza can be found in multiple sources [@bouda40; @genko55; @allen56; @tabulova76; @colarusso88; @oherin92; @chirikba96; @lomtatidze06; @arkadiev19; @oherin21], however more detailed phonological description is limited to [@bouda40; @genko55; @catford72; @tabulova76; @colarusso88; @arkadiev19] and lack any acoustic analysis that appears just recently [@mamonova19]. It is also worth mentioning works by V. Chirikba [@chirikba85; @chirikba20], where he provides data from huge amount of Abaza settlements, explores correspondences of post-alveolar sibilants among them and compare obtained data with data from Abkhaz and Adyghe.
 
-# Consonants
+# Phonological inventory
 
-```{r}
-read_csv("data/t_cons.csv", col_names = FALSE) %>% 
+Phonological inventory of T'ap'anta is present in Table \ref{tab:phon-system}. I illustrate[^trans_system] consonant inventory with some examples in Appendix 1.
+
+[^trans_system]: In this work I will use two transcription systems. First system is my interpretation of Abaza phonology using IPA. Second is standard Abaza orthography. The IPA transcription used in this work differ from traditional Caucasian transcription, however Northwest Caucasian researchers still can retrieve desired information from orthographic correspondences. Unfortunately IPA alphabet still allows a lot of space for interpretation, so my system is differ from other recent phonological phonetic discriptions illustration of Northwest Caucasian languages (see [@gordon06; @andersson21]). I refuse to use symbols like ʃ, ʒ, ɕ or ʑ one can find in the literature for special post-alveolars sounds present in all Northwest Caucasian and continue to use symbols ŝ and ẑ after the following sources [@ladefoged96: 161--164; @catford94; @testelets09; @applebaum11; @paschen15].
+
+
+```{r phon-system}
+read_csv("data/t_cons.csv") %>% 
+  rename(` ` = X1) %>% 
   mutate_all(function(x) ifelse(is.na(x), "", x)) %>% 
   knitr::kable(align = c("l", rep("c", 12)),
-               caption = "Consonant system of most speakers from Inzhich-Chukun and Krasniy Vostok",
-               col.names = NULL)
+               caption = "Joint consonant system of Inzhich-Chukun and Krasniy Vostok. Parenthesis denote the system that is common for Krasniy Vostok, where the vast mojority of speakers use labialised post-alveolar segments.") %>% 
+  kable_styling(latex_options = c("scale_down", "HOLD_position"), full_width = FALSE) %>%
+  row_spec(0, angle = -90)
 ```
 
+The main difference between Inzhich-Chukun and Krasniy Vostok consonant systems is in post-alveolar consonants. All speakers of Inzhich-Chukun and some minority in Krasniy Vostok use non-labialized post-alveolars.
+
+```{r post_alveolar}
+read_csv("data/t_post_alveolar.csv") %>% 
+  rename(` ` = X1) %>% 
+  mutate_all(function(x) ifelse(is.na(x), "", x)) %>% 
+  knitr::kable(align = c("l", rep("c", 12)),
+               caption = "Post-alveolar correspondences between Inzhich-Chukun and Krasniy Vostok.") %>% 
+  kable_styling(latex_options = c("scale_down", "HOLD_position"), full_width = FALSE) 
+```
+
+
+(c. f. with [@chirikba85; @chirikba20])
+
+[@catford72] ɥ-labialisation.
+
+\pagebreak
+
+# Appendix 1: List of consonant examples {-}
+
+Example words for consonants from Table \ref{tab:phon-system}. First example before slash is from Inzhich-Chukun and some speakers from Krasniy Vostok, example after slash are common for most speakers from Krasniy Vostok.
+
+```{r phon-examples}
+read_csv("data/t_cons_examples.csv") %>%
+  select(transcription, orthography, translation) %>% 
+  filter(transcription != '') %>% 
+  mutate_all(function(x) ifelse(is.na(x), "", x)) %>% 
+  knitr::kable(align = "l",
+               longtable = TRUE) %>% 
+   kable_styling(latex_options = c("striped", "repeat_header"),
+                 repeat_header_continued = FALSE,
+                 repeat_header_text = "")
+```
+
+\pagebreak
+
+# Appendix 2: List of words that correspond to post-alveolar in Inzhich-Chukun but realised as /ʂ/ or /ʐ/ and not as /ŝ(ʷ)/ or /ẑ(ʷ)/ in Krasniy Vostok {-}
+
+\pagebreak
 
 # References
