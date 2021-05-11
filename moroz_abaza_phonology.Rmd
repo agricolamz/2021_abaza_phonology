@@ -3,6 +3,7 @@ title: "Phonology of T'ap'anta Abaza: examples from Inzhig-Chkun and Gumlokt"
 author: |
         | G. A. Moroz
         | (HSE University, Russia)
+date: '`r Sys.Date()`'
 bibliography: bibliography.bib
 csl: reference_style.csl
 editor_options:
@@ -77,10 +78,21 @@ read_csv("data/t_cons.csv") %>%
   row_spec(0, angle = -90)
 ```
 
-The main difference between Inzhig-Chkun and Gumlokt consonant systems is in post-alveolar consonants. All speakers of Inzhig-Chkun and some minority in Gumlokt use non-labialized post-alveolars (e. g. ŝ). The majority of speakers in Gumlokt use labialised post-alveolars (e. g. ŝʷ). Everything become even more complicated, since some post-alveolars in Inzhig-Chkun correspond to retroflex segments in Gumlokt. It looks like there is some proto-phonemes that merged together in most Abaza dialects except Gumlokt and Apsua (Ashkharywa dialect, [@lomtatidze06: 47, 445--446]): in Apsua in the same position labialized retroflex fricatives are observed:
+The main difference between Inzhig-Chkun and Gumlokt consonant systems is in post-alveolar consonants. All speakers of Inzhig-Chkun and some minority in Gumlokt use non-labialized post-alveolars (e. g. ŝ, see Figure \ref{fig:sibilants-d28}). The majority of speakers in Gumlokt use labialised post-alveolars (e. g. ŝʷ). Everything become even more complicated, since some post-alveolars in Inzhig-Chkun correspond to retroflex segments in Gumlokt. It looks like there is some proto-phonemes that merged together in most Abaza dialects except Gumlokt and Apsua (Ashkharywa dialect, [@lomtatidze06: 47, 445--446]): in Apsua in the same position labialized retroflex fricatives are observed (cf. (@sh)--(@zh)).
 
 (@sh) ŝə (Inzhig-Chkun), ʂə (Gumlokt), ʂʷə (Apsua) --- 'door'
 (@zh) ẑə (Inzhig-Chkun), ʐə (Gumlokt), ʐʷə (Apsua) --- 'old'
+
+```{r, eval = FALSE}
+library(phonfieldwork)
+draw_sound(file_name = "data/d28_fricatives.wav", 
+           annotation = "data/d28_fricatives.TextGrid", 
+           frequency_range = c(0, 9))
+```
+
+```{r sibilants-d28, fig.cap="Fricatives by female speaker with non-labialised post-alveolars.", fig.align="center"}
+knitr::include_graphics("images/03_d28_fricatives.png", dpi = 150)
+```
 
 Presented examples show that the post-alveolar correspondences between Inzhig-Chkun and Gumlokt not predictable without Gumlokt or Apsua data (see Table \ref{tab:post_alveolar}), so I decided to collect some lexicon that could be useful for further historical and dialectal investigation (see Appendix 2).
 
@@ -98,7 +110,7 @@ variation_experiment <- read.csv("data/gumlokt_variation_experiment.csv")
 subsytems <- table(variation_experiment$X1..Корова)
 ```
 
-It is worth mentioning that in [@chirikba20] based on different resources Vyacheslav Chirikba discovered even bigger variation. There are four sibbilant subsystems in [@chirikba20: 27], however our field data support only two types: with labialised post-alveolars (majority) and with non-labialised post-alveolars (minority). In order to check my hypothesis I performed small experiment asking `r nrow(variation_experiment)` Gumlokt speakers (`r sum(variation_experiment$X0.2.gender == "f")` female and `r sum(variation_experiment$X0.2.gender == "m")` male speakers). As I found indeed there is a variation across speakers I worked with, however only Gumlokt 2 (with labialised post-alveolars, `r subsytems[2]` people) and Gumlokt 1 (with non-labialised post-alveolars, `r subsytems[1]` people) sibilant subsytems from [@chirikba20] were attested (see Figure).
+It is worth mentioning that in [@chirikba20] based on different resources Vyacheslav Chirikba discovered even bigger variation. There are four sibilant subsystems in [@chirikba20: 27], however our field data support only two types: with labialised post-alveolars (majority) and with non-labialised post-alveolars (minority). In order to check my hypothesis I performed small experiment asking `r nrow(variation_experiment)` Gumlokt speakers (`r sum(variation_experiment$X0.2.gender == "f")` female and `r sum(variation_experiment$X0.2.gender == "m")` male speakers) for two words: ẑ(ʷ)ə 'cow' and tŝ'(ʷ)a 'apple'. As I found indeed there is a variation across speakers I worked with, however only Gumlokt 2 (with labialised post-alveolars, `r subsytems[2]` people) and Gumlokt 1 (with non-labialised post-alveolars, `r subsytems[1]` people) sibilant subsytems from [@chirikba20] were attested (see Figure \ref{fig:experiment-results}). It also visible from the experiment results that non-labialised post-alveolars are tend to appear in speach of older females, but this is just a preliminary result that should be checked with greater number of stimuli and speakers.
 
 ```{r, eval=FALSE}
 variation_experiment %>% 
@@ -113,14 +125,13 @@ variation_experiment %>%
 ggsave("images/02_experiment.png", height = 5, width = 9)
 ```
 
-```{r, fig.cap="Results of experiment.", fig.align="center"}
+```{r experiment-results, fig.cap="Results of experiment. Each dot represents one person colored by result and faceted by gender.", fig.align="center"}
 knitr::include_graphics("images/02_experiment.png", dpi = 500)
 ```
 
-
 Except of my interpretation of alveolar and retroflex consonants (see the footnote on the page \pageref{trans-system}) the main difference between my phonological description and older ones is in the palatal area: I treat segments cʰ, c', and ɟ  as palatal, however more traditional interpretation is palatalized velars: kʲ, k', and ɡʲ.
 
-Articulation of labialization in T'ap'anta is different for different places of articulation (see [@catford72] for the same observations for Abkhaz): 
+Articulation of labialization in T'ap'anta is different for different places of articulation (see [@catford72] for the similar observations for Abkhaz): 
 
 * /w/-labialisation --- this kind of labialization is more or less independent of the main place of articulation. This kind of labialisation is typical for velar and uvular places fricatives and stops.
 * /ɥ/-labialisation --- this kind of labialization is typical for pharyngeals. It looks like the tongue body is retracted (due to pharyngeal place of articulation) and raised, that results /ɥ/-like sound
@@ -131,6 +142,9 @@ There is also so called weaken labialised post-alveolars mentioned in literature
 ## Vowels
 
 # Stress
+
+T'ap'anta Abaza stress was discussed in my unpublished report from previous expeditions and became a basis for [@arkadiev19].
+
 
 \pagebreak
 
