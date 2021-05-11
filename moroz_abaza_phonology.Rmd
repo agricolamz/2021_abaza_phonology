@@ -1,5 +1,5 @@
 ---
-title: "Phonology of T'ap'anta Abaza: examples from Inzhich-Chkun and Gumlokt"
+title: "Phonology of T'ap'anta Abaza: examples from Inzhig-Chkun and Gumlokt"
 author: |
         | G. A. Moroz
         | (HSE University, Russia)
@@ -21,7 +21,7 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, fig.width = 8, fig.height = 5)
 library(tidyverse)
-theme_set(theme_minimal()+theme(text = element_text(family = "Times New Roman", size = 18)))
+theme_set(theme_bw()+theme(text = element_text(family = "Times New Roman", size = 18)))
 library(kableExtra)
 # setwd("/home/agricolamz/work/articles/2021_abaza_phonology")
 ```
@@ -32,7 +32,7 @@ library(kableExtra)
 
 ## General information about Abaza
 
-In this article I describe two varieties of Tapanta dialect of Abaza (ISO-639-3 `abq`, glottocode `abaz1241`) spoken in two villages in the Karachay-Cherkess Republic: Inzhich-Chkun (in Abaza /jənˈdʒəɡʲ-tʃk'ʷən/) and Krasniy Vostok (in Abaza /ɡʷəmˈlokt/). Abaza is a language of the Abkhaz-Abaza group of Northwest Caucasian family of languages. After the Caucasian War (1817--1864) a lot of Abaza, Abkhaz, Ubykh and Adyghe people were forced either to resettle from higher mountains or to immigrate to the Ottoman Empire. As a result Abaza people were split into those who remain in Russia (mostly in the Karachay-Cherkess Republic, see Figure \ref{fig:abaza-map} created with `lingtypology` [@moroz17]) and who moved to Turkey. According to the 2010 Russian census, there are slightly less than 38 thousand speakers of Abaza in Russia. The exact number of speakers in other countries, mainly in Turkey [@chirikba12: 21--23], is unknown. The data analyzed in this study were collected in 2018, 2019 and 2021 during a field trip to the villages. Even though traditionally Abaza is treated as a separate language with two dialects T'ap'anta and Shkharawa [@genko55: 5--7; @tabulova76: 3--4; @lomtatidze06: 98], some of the researches consider Abkhaz and Abaza to be a dialect continuum [e. g. @hewitt79: 1; @colarusso88: 7--9; @chirikba96]. However varieties of Inzhich-Chkun and Gumlokt belong to the same dialect, those lects have their own differences, e. g. *Abaza language* is /abaza bəz**ŝ**a/ in Inzhich-Chkun and /abaza bəz**ʂ**a/ in Gumlokt.
+In this article I describe two varieties of Tapanta dialect of Abaza (ISO-639-3 `abq`, glottocode `abaz1241`) spoken in two villages in the Karachay-Cherkess Republic: Inzhig-Chkun (in Abaza /jənˈdʒəɡʲ-tʃk'ʷən/) and Krasniy Vostok (in Abaza /ɡʷəmˈlokt/). Abaza is a language of the Abkhaz-Abaza group of Northwest Caucasian family of languages. After the Caucasian War (1817--1864) a lot of Abaza, Abkhaz, Ubykh and Adyghe people were forced either to resettle from higher mountains or to immigrate to the Ottoman Empire. As a result Abaza people were split into those who remain in Russia (mostly in the Karachay-Cherkess Republic, see Figure \ref{fig:abaza-map} created with `lingtypology` [@moroz17]) and who moved to Turkey. According to the 2010 Russian census, there are slightly less than 38 thousand speakers of Abaza in Russia. The exact number of speakers in other countries, mainly in Turkey [@chirikba12: 21--23], is unknown. The data analyzed in this study were collected in 2018, 2019 and 2021 during a field trip to the villages. Even though traditionally Abaza is treated as a separate language with two dialects T'ap'anta and Shkharawa [@genko55: 5--7; @tabulova76: 3--4; @lomtatidze06: 98], some of the researches consider Abkhaz and Abaza to be a dialect continuum [e. g. @hewitt79: 1; @colarusso88: 7--9; @chirikba96]. However varieties of Inzhig-Chkun and Gumlokt belong to the same dialect, those lects have their own differences, e. g. *Abaza language* is /abaza bəz**ŝ**a/ in Inzhig-Chkun and /abaza bəz**ʂ**a/ in Gumlokt.
 
 
 ```{r, eval = FALSE}
@@ -50,7 +50,7 @@ map.feature(languages = df$language,
             minimap = TRUE, minimap.position = "topleft")
 ```
 
-```{r abaza-map, fig.cap="Abaza settlements of the Karachay-Cherkess Republic colored by the dialect. In Abazakt, Adyge-Khabl, Ersakon, Khumara, and Psauche-Dakhe Circassians are predominant. In Koydan Karachay are predominant.", fig.align="center"}
+```{r abaza-map, fig.cap="Abaza settlements of the Karachay-Cherkess Republic colored by the dialect (mostly based on (Chirikba 2020)). In Abazakt, Adyge-Khabl, Ersakon, Khumara, and Psauche-Dakhe Circassians are predominant. In Koydan Karachay are predominant.", fig.align="center"}
 knitr::include_graphics("images/01_abaza_map.png", dpi = 200)
 ```
 
@@ -59,6 +59,8 @@ knitr::include_graphics("images/01_abaza_map.png", dpi = 200)
 Phonological inventory of Abaza can be found in multiple sources [@bouda40; @lomtatidze44; @genko55; @allen56; @tabulova76; @colarusso88; @oherin92; @chirikba96; @lomtatidze06; @arkadiev19; @oherin21], however more detailed phonological description is limited to [@bouda40; @lomtatidze44; @genko55; @catford72; @tabulova76; @colarusso88; @arkadiev19] and lack any acoustic analysis that appears just recently [@mamonova19]. It is also worth mentioning works by V. Chirikba [@chirikba85; @chirikba20], where he provides data from huge amount of Abaza settlements, explores correspondences of post-alveolar sibilants among them and compare obtained data with data from Abkhaz and Adyghe.
 
 # Phonological inventory
+
+## Consonants
 
 Phonological inventory of T'ap'anta is present in Table \ref{tab:phon-system}. I illustrate[^trans_system] consonant inventory with some examples in Appendix 1.
 
@@ -70,42 +72,76 @@ read_csv("data/t_cons.csv") %>%
   rename(` ` = X1) %>% 
   mutate_all(function(x) ifelse(is.na(x), "", x)) %>% 
   knitr::kable(align = c("l", rep("c", 12)),
-               caption = "Joint consonant system of Inzhich-Chkun and Gumlokt. Parenthesis denote the system that is common for Gumlokt, where the vast mojority of speakers use labialised post-alveolar segments.") %>% 
+               caption = "Joint consonant system of Inzhig-Chkun and Gumlokt. Parenthesis denote the system that is common for Gumlokt, where the vast mojority of speakers use labialised post-alveolar segments.") %>% 
   kable_styling(latex_options = c("scale_down", "HOLD_position"), full_width = FALSE) %>%
   row_spec(0, angle = -90)
 ```
 
-The main difference between Inzhich-Chkun and Gumlokt consonant systems is in post-alveolar consonants. All speakers of Inzhich-Chkun and some minority in Gumlokt use non-labialized post-alveolars (e. g. ŝ). The majority of speakers in Gumlokt use labialised post-alveolars (e. g. ŝʷ). Everything become even more complicated, since some post-alveolars in Inzhich-Chkun correspond to retroflex segments in Gumlokt. It looks like there is some proto-phonemes that merged together in most Abaza dialects except Gumlokt and Apsua (Ashkharywa dialect, [@lomtatidze06: 47, 445--446]): in Apsua in the same position labialized retroflex fricatives are observed:
+The main difference between Inzhig-Chkun and Gumlokt consonant systems is in post-alveolar consonants. All speakers of Inzhig-Chkun and some minority in Gumlokt use non-labialized post-alveolars (e. g. ŝ). The majority of speakers in Gumlokt use labialised post-alveolars (e. g. ŝʷ). Everything become even more complicated, since some post-alveolars in Inzhig-Chkun correspond to retroflex segments in Gumlokt. It looks like there is some proto-phonemes that merged together in most Abaza dialects except Gumlokt and Apsua (Ashkharywa dialect, [@lomtatidze06: 47, 445--446]): in Apsua in the same position labialized retroflex fricatives are observed:
 
-(@sh) ŝə (Inzhich-Chkun), ʂə (Gumlokt), ʂʷə (Apsua) --- 'door'
-(@zh) ẑə (Inzhich-Chkun), ʐə (Gumlokt), ʐʷə (Apsua) --- 'old'
+(@sh) ŝə (Inzhig-Chkun), ʂə (Gumlokt), ʂʷə (Apsua) --- 'door'
+(@zh) ẑə (Inzhig-Chkun), ʐə (Gumlokt), ʐʷə (Apsua) --- 'old'
 
-Presented examples show that the post-alveolar correspondences between Inzhich-Chkun and Gumlokt not predictable without Gumlokt or Apsua data (see Table \ref{tab:post_alveolar}), so I decided to collect some lexicon that could be useful for further historical and dialectal investigation (see Appendix 2).
+Presented examples show that the post-alveolar correspondences between Inzhig-Chkun and Gumlokt not predictable without Gumlokt or Apsua data (see Table \ref{tab:post_alveolar}), so I decided to collect some lexicon that could be useful for further historical and dialectal investigation (see Appendix 2).
 
 ```{r post_alveolar}
 read_csv("data/t_post_alveolar.csv") %>% 
   rename(` ` = X1) %>% 
   mutate_all(function(x) ifelse(is.na(x), "", x)) %>% 
   knitr::kable(align = c("l", rep("c", 12)),
-               caption = "Post-alveolar correspondences between Inzhich-Chkun and Gumlokt.") %>% 
+               caption = "Post-alveolar correspondences between Inzhig-Chkun and Gumlokt.") %>% 
   kable_styling(latex_options = c("scale_down", "HOLD_position"), full_width = FALSE) 
 ```
 
-Except of my interpretation of alveolar and retroflex consonants (see the footnote on the page \pageref{trans-system}) the main difference between my phonological description and older ones is in the palatal area: I treat segments cʰ, c', and ɟ  as palatal, however more traditional interpretation is palatalised velars: kʲ, k', and ɡʲ.
+```{r}
+variation_experiment <- read.csv("data/gumlokt_variation_experiment.csv")
+subsytems <- table(variation_experiment$X1..Корова)
+```
 
-(c. f. with [@chirikba85; @chirikba20], [@lomtatidze44]) weak labialised post-alveolars.
+It is worth mentioning that in [@chirikba20] based on different resources Vyacheslav Chirikba discovered even bigger variation. There are four sibbilant subsystems in [@chirikba20: 27], however our field data support only two types: with labialised post-alveolars (majority) and with non-labialised post-alveolars (minority). In order to check my hypothesis I performed small experiment asking `r nrow(variation_experiment)` Gumlokt speakers (`r sum(variation_experiment$X0.2.gender == "f")` female and `r sum(variation_experiment$X0.2.gender == "m")` male speakers). As I found indeed there is a variation across speakers I worked with, however only Gumlokt 2 (with labialised post-alveolars, `r subsytems[2]` people) and Gumlokt 1 (with non-labialised post-alveolars, `r subsytems[1]` people) sibilant subsytems from [@chirikba20] were attested (see Figure).
 
-[@catford72] ɥ-labialisation.
+```{r, eval=FALSE}
+variation_experiment %>% 
+  mutate(type = ifelse(X1..Корова == "ẑʷə", "labialised p.-a.", "non-labialised p.-a."),
+         X0.2.gender = ifelse(X0.2.gender == "f", "female", "male")) %>% 
+  ggplot(aes(X0.3.year.of.birth, fill = type))+
+  geom_dotplot()+
+  facet_wrap(~X0.2.gender)+
+  labs(fill = "", x = "year of birth", y = "")+
+  scale_y_continuous(NULL, breaks = 0, labels = "")+
+  theme(legend.position = "bottom", axis.ticks.y = element_blank())
+ggsave("images/02_experiment.png", height = 5, width = 9)
+```
+
+```{r, fig.cap="Results of experiment.", fig.align="center"}
+knitr::include_graphics("images/02_experiment.png", dpi = 500)
+```
+
+
+Except of my interpretation of alveolar and retroflex consonants (see the footnote on the page \pageref{trans-system}) the main difference between my phonological description and older ones is in the palatal area: I treat segments cʰ, c', and ɟ  as palatal, however more traditional interpretation is palatalized velars: kʲ, k', and ɡʲ.
+
+Articulation of labialization in T'ap'anta is different for different places of articulation (see [@catford72] for the same observations for Abkhaz): 
+
+* /w/-labialisation --- this kind of labialization is more or less independent of the main place of articulation. This kind of labialisation is typical for velar and uvular places fricatives and stops.
+* /ɥ/-labialisation --- this kind of labialization is typical for pharyngeals. It looks like the tongue body is retracted (due to pharyngeal place of articulation) and raised, that results /ɥ/-like sound
+* /y/-labialisation --- this kind of labialisation is typical only for post-alveolars in Gumlokt. The main place of articulation somehow merged with the additional place of articulation that produces a long hole for /y/-like sound.
+
+There is also so called weaken labialised post-alveolars mentioned in literature [@chirikba85; @chirikba20; @lomtatidze44], but we didn't noticed such sounds neither in Inzhig-Chkun nor Gumlokt.
+
+## Vowels
+
+# Stress
 
 \pagebreak
 
 # Appendix 1: List of consonant examples {-}
 
-Example words for consonants from Table \ref{tab:phon-system}. First example before slash is from Inzhich-Chkun and some speakers from Gumlokt, example after slash are common for most speakers from Gumlokt.
+Example words for consonants from Table \ref{tab:phon-system}. First example before slash is from Inzhig-Chkun and some speakers from Gumlokt, example after slash are common for most speakers from Gumlokt.
 
 ```{r phon-examples}
 read_csv("data/t_cons_examples.csv") %>%
   select(transcription, orthography, translation) %>% 
+  filter(transcription != "") %>% 
   mutate_all(function(x) ifelse(is.na(x), "", x)) %>% 
   knitr::kable(align = "l",
                longtable = TRUE) %>% 
@@ -116,7 +152,7 @@ read_csv("data/t_cons_examples.csv") %>%
 
 \pagebreak
 
-# Appendix 2: Post-alveolar/retroflex correspondences to Inzhich-Chkun's post-alveolars in Gumlokt  {-}
+# Appendix 2: Post-alveolar/retroflex correspondences to Inzhig-Chkun's post-alveolars in Gumlokt  {-}
 
 ```{r post-alveolar-examples}
 read_csv("data/t_post_alveolar_examples.csv") %>%
