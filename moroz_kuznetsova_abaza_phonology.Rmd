@@ -146,17 +146,19 @@ The vowel inventory traditionally analized as two core vowels a (low) and ə (mi
 (@u) u < əw or wə;
 (@o) o < aw.
 
-In order to show vowel space I collected a list of monosyllabic words in Inzhig-Chkun and Gumlokt (see Appendix 3).
+In order to analyze vowel space we collected a list of monosyllabic words with  6 speakers from Inzhig-Chkun and 5 speakers from Gumlokt (see Appendix 3).
 
 # Stress
 
-T'ap'anta Abaza stress was discussed in my unpublished report from previous expeditions and became a basis for [@arkadiev19]. Unfortunately I've changed my opinion, so I will try to sum up my current opinion on the topic. Our stress model based on the ideas presented in [@dybo77; @spruit86]. 
+T'ap'anta Abaza stress was discussed in G. Moroz's unpublished report from previous expeditions and became a basis for [@arkadiev19]. Unfortunately we've changed our opinion, so I will try to sum up my current opinion on the topic. Our stress model based on the ideas presented in [@dybo77; @spruit86]. 
 
 Stress in Abaza is distinctive (see example (@stress) and other examples in Appendix 4). 
 
 (@stress) saˈɾa 'I' vs. ˈsaɾa 'lamb'
 
 Each Abaza morpheme (even borrowed) can be represented by combination of open syllables with vowel a or ə. According to some test discussed bellow each syllable assigned to one of the accentual classes: dominant or recessive. The main stress rule is formulated in [@spruit86: 37--40]: stress falls on the first D element followed by R or word boundary (see () and ...), otherwise stress is on the first syllable (see ...).
+
+In order to analyze acoustic effect of the stress on vowels we collected a list of 50 minimal pairs for stress with 7 speakers from Inzhig-Chkun and 6 speakers from Gumlokt (see Appendix 4).
 
 \pagebreak
 
