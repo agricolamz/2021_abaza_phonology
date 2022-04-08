@@ -1,8 +1,8 @@
 ---
 title: "Phonology of T'ap'anta Abaza: examples from Inzhig-Chkun and Gumlokt"
 author: |
-        | G. A. Moroz
-        | (HSE University, Russia)
+        | G. Moroz, S. Kuznetsova
+        | (HSE University)
 date: '`r Sys.Date()`'
 bibliography: bibliography.bib
 csl: reference_style.csl
@@ -22,7 +22,7 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, fig.width = 8, fig.height = 5)
 library(tidyverse)
-theme_set(theme_bw()+theme(text = element_text(family = "Times New Roman", size = 18)))
+theme_set(theme_bw()+theme(text = element_text(family = "Brill", size = 18)))
 library(kableExtra)
 # setwd("/home/agricolamz/work/articles/2021_abaza_phonology")
 ```
@@ -70,7 +70,7 @@ Phonological inventory of T'ap'anta is present in Table \ref{tab:phon-system}. I
 
 ```{r phon-system}
 read_csv("data/t_cons.csv") %>% 
-  rename(` ` = X1) %>% 
+  rename(" " = X1) %>% 
   mutate_all(function(x) ifelse(is.na(x), "", x)) %>% 
   knitr::kable(align = c("l", rep("c", 12)),
                caption = "Joint consonant system of Inzhig-Chkun and Gumlokt. Parenthesis denote the system that is common for Gumlokt, where the vast mojority of speakers use labialised post-alveolar segments.") %>% 
@@ -78,10 +78,10 @@ read_csv("data/t_cons.csv") %>%
   row_spec(0, angle = -90)
 ```
 
-The main difference between Inzhig-Chkun and Gumlokt consonant systems is in post-alveolar consonants. All speakers of Inzhig-Chkun and some minority in Gumlokt use non-labialized post-alveolars (e. g. ŝ, see Figure \ref{fig:sibilants-d28}). The majority of speakers in Gumlokt use labialised post-alveolars (e. g. ŝʷ). Everything become even more complicated, since some post-alveolars in Inzhig-Chkun correspond to retroflex segments in Gumlokt. It looks like there is some proto-phonemes that merged together in most Abaza dialects except Gumlokt and Apsua (Ashkharywa dialect, [@lomtatidze06: 47, 445--446]): in Apsua in the same position labialized retroflex fricatives are observed (cf. (@sh)--(@zh)).
+The main difference between Inzhig-Chkun and Gumlokt consonant systems is in post-alveolar consonants. All speakers of Inzhig-Chkun and some minority in Gumlokt use non-labialized post-alveolars (e. g. ŝ, see Figure \ref{fig:sibilants-d28}). The majority of speakers in Gumlokt use labialised post-alveolars (e. g. ŝʷ). Everything become even more complicated, since some post-alveolars in Inzhig-Chkun correspond to retroflex segments in Gumlokt. It looks like there is some proto-phonemes that merged together in most Abaza dialects except Gumlokt and Apsua (Ashkharywa dialect, [@lomtatidze06: 47, 445--446]): in Apsua in the same position labialized retroflex fricatives are observed (cf. \ref{sh}--\ref{zh}).
 
-(@sh) ŝə (Inzhig-Chkun), ʂə (Gumlokt), ʂʷə (Apsua) --- 'door'
-(@zh) ẑə (Inzhig-Chkun), ʐə (Gumlokt), ʐʷə (Apsua) --- 'old'
+\lb{sh}{ ŝə (Inzhig-Chkun), ʂə (Gumlokt), ʂʷə (Apsua) --- 'door'}
+\lb{zh}{ ẑə (Inzhig-Chkun), ʐə (Gumlokt), ʐʷə (Apsua) --- 'old'}
 
 ```{r, eval = FALSE}
 library(phonfieldwork)
@@ -133,18 +133,32 @@ Except of my interpretation of alveolar and retroflex consonants (see the footno
 
 Articulation of labialization in T'ap'anta is different for different places of articulation (see [@catford72] for the similar observations for Abkhaz): 
 
-* /w/-labialisation --- this kind of labialization is more or less independent of the main place of articulation. This kind of labialisation is typical for velar and uvular places fricatives and stops.
-* /ɥ/-labialisation --- this kind of labialization is typical for pharyngeals. It looks like the tongue body is retracted (due to pharyngeal place of articulation) and raised, that results /ɥ/-like sound
-* /y/-labialisation --- this kind of labialisation is typical only for post-alveolars in Gumlokt. The main place of articulation somehow merged with the additional place of articulation that produces a long hole for /y/-like sound.
+* /w/-labialisation --- this kind of labialization is more or less independent of the main place of articulation. This kind of labialisation is typical for velar and uvular places fricatives and stops;
+* /ɥ/-labialisation --- this kind of labialization is typical for pharyngeals. It looks like the tongue body is retracted (due to pharyngeal place of articulation) and raised, that results /ɥ/-like sound;
+* /y/-labialisation --- this kind of labialization is typical only for post-alveolars in Gumlokt. The main place of articulation somehow merged with the additional place of articulation that produces a long hole for /y/-like sound.
 
 There is also so called weaken labialised post-alveolars mentioned in literature [@chirikba85; @chirikba20; @lomtatidze44], but we didn't noticed such sounds neither in Inzhig-Chkun nor Gumlokt.
 
 ## Vowels
 
+The vowel inventory traditionally analized as two core vowels a (low) and ə (mid) (see [@bouda40; @lomtatidze44; @genko55; @allen56; @tabulova76; @colarusso88; @oherin92; @chirikba96; @lomtatidze06; @arkadiev19; @oherin21]). There are additional vowel colors that appear in numerous loanwords or due to contraction of vowel and glide (cf. \ref{i}--\ref{o}):
+
+\lb{i}{ i < əj or jə;}
+\lb{e}{ e < aj;}
+\lb{u}{ u < əw or wə;}
+\lb{o}{ o < aw.}
+
+In order to show vowel space I collected a list of monosyllabic words in Inzhig-Chkun and Gumlokt (see Appendix 3).
+
 # Stress
 
-T'ap'anta Abaza stress was discussed in my unpublished report from previous expeditions and became a basis for [@arkadiev19].
+T'ap'anta Abaza stress was discussed in my unpublished report from previous expeditions and became a basis for [@arkadiev19]. Unfortunately I've changed my opinion, so I will try to sum up my current opinion on the topic. Our stress model based on the ideas presented in [@dybo77; @spruit86]. 
 
+Stress in Abaza is distinctive (see (\ref{stress}) and other examples in Appendix 4). 
+
+\lb{stress}{ saˈɾa 'I' vs. ˈsaɾa 'lamb'}
+
+Each Abaza morpheme (even borrowed) can be represented by combination of open syllables with vowel a or ə. According to some test discussed bellow each syllable assigned to one of the accentual classes: dominant or recessive. The main stress rule is formulated in [@spruit86: 37--40]: stress falls on the first D element followed by R or word boundary (see () and ...), otherwise stress is on the first syllable (see ...).
 
 \pagebreak
 
@@ -178,6 +192,25 @@ read_csv("data/t_post_alveolar_examples.csv") %>%
                  repeat_header_continued = FALSE,
                  repeat_header_text = "")
 ```
+
+\pagebreak
+
+# Appendix 3: List of monosyllabic words for the vowel space research  {-}
+
+```{r vowel-stimuli}
+read_csv("data/t_vowel_stimuli.csv") %>%
+  select(transcription, orthography, translation) %>% 
+  mutate_all(function(x) ifelse(is.na(x), "", x)) %>% 
+  knitr::kable(align = "l",
+               longtable = TRUE) %>% 
+   kable_styling(latex_options = c("striped", "repeat_header"),
+                 repeat_header_continued = FALSE,
+                 repeat_header_text = "")
+```
+
+\pagebreak
+
+# Appendix 4: List of minimal pairs for the stress research {-}
 
 \pagebreak
 
